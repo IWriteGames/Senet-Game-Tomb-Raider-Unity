@@ -17,7 +17,7 @@ public class TokenManager : MonoBehaviour
         Instance = this;
     }
 
-    public int MoveTokens(bool isPlayer)
+    public void MoveTokens(bool isPlayer)
     {
         int numberResult = 0;
         piece1.transform.rotation = Quaternion.Euler(0, 90, 0);
@@ -72,11 +72,20 @@ public class TokenManager : MonoBehaviour
 
         if(isPlayer)
         {
-            GameManager.Instance.canRoll = false;
-            GameManager.Instance.canMoveButtons = true;
+            GameManager.Instance.ActiveButtonsPlayer();
         }
 
-        return numberResult;
+        if(numberResult == 0) { numberResult = 6; }
+
+        //CustomDebug
+        if(isPlayer)
+        {
+            CustomLogCanvas.Instance.AddLog("-Player has obtained a " + numberResult);
+        } else {
+            CustomLogCanvas.Instance.AddLog("-Enemy has obtained a " + numberResult);
+        }
+
+        GameManager.Instance.numberResult = numberResult;
     }
 
 }

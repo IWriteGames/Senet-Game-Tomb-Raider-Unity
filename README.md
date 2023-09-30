@@ -23,7 +23,7 @@ If you like what I do, please follow me on my social networks!
 
 ## About the project
 
-The version of this branch is version 0.1
+The version of this branch is version 1.0.
 
 This project is a puzzle that originally appeared in the Tomb Raider The Last Revelation.
 The object of the game is to get your three pieces to the end of the board, following a set of rules which are available within the game.
@@ -34,13 +34,11 @@ I modelled the game entirely with Blender 3 except for the enemy, which I took f
 
 ## About the development and improvements
 
-Before looking at the code, it is very important that you read this section. The code is perhaps the worst you can find on Github. It is not a joke.
+In this version, the code has been refactored and improvements have been added to the game, such as music and simple animations for the board pieces. In addition, a main menu and a credits panel have been added.
 
-When I created the project, the idea was as follows. Don't follow any rules, code as needed, correct as errors arise and work as you go along.
+Thanks to the refactoring, several bugs have been fixed and a small tool has been created to debug the game while programming. But have all the bugs been fixed?
 
-Why? Because I thought it was a good idea to show a project created with the worst practices and then refactor the whole project, adding improvements to the project itself to show that it is a good idea to follow good coding practices.
-
-You can find the finished project in the main branch
+But... by creating a main menu, it is now possible to close the game from the main menu and from the game menu. Is it necessary to have two functions to close the game? And does the code work in all cases? Could the code and the use of some variables be further refactored? In addition, some graphical improvements could be added to the project: wouldn't it look better if there was a small explosion when a stone was destroyed?
 
 ## Unity Version
 
