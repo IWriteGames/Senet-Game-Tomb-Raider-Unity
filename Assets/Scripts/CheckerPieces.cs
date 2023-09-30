@@ -258,7 +258,10 @@ public class CheckerPieces : MonoBehaviour
             }
         }
 
-        if(GameManager.Instance.numberResult == 6) { return; }
+        if(GameManager.Instance.numberResult == 6) { 
+            GameManager.Instance.TurnPlayer();
+            return; 
+        }
 
         GameManager.Instance.TurnEnemy();
     }
